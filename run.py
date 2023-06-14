@@ -3,10 +3,22 @@ import random
 import os
 from time import sleep
 
+# How many numbers appear to the user.
 sequence_length = 5
+# How high the numbers shown will go upto.
 max_number = 9
 
+
+def rules():
+    """
+    Description of the game and its rules.
+    """
+    print("Welcome to the Memory Game! /n")
+    print("The objective of this game is for you to try and guess the sequence")
+    print("Fail more than 3 times and its GAME OVER!")
+
 numbers = []
+
 
 for sequence_index in range(sequence_length):
     random_number = random.randint(1, max_number)
