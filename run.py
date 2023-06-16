@@ -39,7 +39,7 @@ if user_sequence == random_list:
 else:
     print("Incorrect! Answer is :", random_list)
 
-while guess_linit < 5:
+while guess_limit < 5:
     guess = int(input())
     guess_limit =+ 1
     if guess == random_list:
