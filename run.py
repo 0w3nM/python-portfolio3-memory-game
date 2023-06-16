@@ -28,10 +28,13 @@ def random_list():
 
 print ("Guess the sequence: ", random_list)
 
-guess = input("Type the order of the numbers: ")
-guessed_sequence = list(map(int, guess.split()))
+def user_input(prompt):
+    return input (prompt)
 
-if guessed_sequence == numbers:
+guess = user_input("Type the order of the numbers: ")
+user_sequence = list(map(int, guess.split()))
+
+if user_sequence == numbers:
     print("Correct!")
 else:
     print("Incorrect! Answer is :", numbers)
