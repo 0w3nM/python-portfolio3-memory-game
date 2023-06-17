@@ -44,7 +44,7 @@ def random_numbers():
 
 
 my_sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-random.shuffle(my_sequence, random_numbers)
+random.shuffle(my_sequence)
 print("Guess the sequence:", my_sequence)
 print("They will disappear in 5 seconds")
 sleep(5)
