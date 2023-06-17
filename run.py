@@ -1,5 +1,6 @@
 # Modules
 import random 
+from random import randint
 import os
 import sys
 from time import sleep
@@ -39,12 +40,15 @@ def random_numbers():
     """
     List of randomised numbers.
     """
-    return 0.1
+    return randint(1, max_number)
 
 
 my_sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 random.shuffle(my_sequence, random_numbers)
-print(my_sequence)
+print("Guess the sequence:", my_sequence)
+print("They will disappear in 5 seconds")
+sleep(5)
+os.system("clear")
 
 
 def user_input(board):
