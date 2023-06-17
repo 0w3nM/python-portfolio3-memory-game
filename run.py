@@ -1,5 +1,5 @@
 # Modules
-from random import shuffle
+import random 
 import os
 import sys
 from time import sleep
@@ -15,8 +15,6 @@ correct_guesses = 0
 sequence_length = 6
 # Highest number that will be shown.
 max_number = 9
-# Numbers that are shown.
-numbers = []
 
 
 def rules():
@@ -24,7 +22,8 @@ def rules():
     Description of the game and its rules.
     """
     print("Welcome to the Memory Game! /n")
-    print("The objective of this game is for you to try and guess the sequence")
+    print("The objective of this game is for")
+    print("you to try and guess the sequence.")
     print("Fail more than 3 times and its GAME OVER!")
     
 
@@ -40,10 +39,12 @@ def random_numbers():
     """
     List of randomised numbers.
     """
-    for sequence_index in range(sequence_length):
-        random_numbers = randint(1, max_number)
-        numbers.append(random_numbers)
-    print("Guess the sequence", numbers)
+    return 0.1
+
+
+my_sequence = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+random.shuffle(my_sequence, random_numbers)
+print(my_sequence)
 
 
 def user_input(board):
@@ -87,6 +88,7 @@ def play_game():
             print(correct_guesses)
             return cont_game()
 
+
 def cont_game():
     """
     Allows the user to keep playing
@@ -102,8 +104,6 @@ def cont_game():
             print("")
             print("Thanks for Playing!")
             sys.exit()
-
-
 
 
 # Print statement showing the final resuilt of the game.
