@@ -37,7 +37,7 @@ def new_sequence():
     random_numbers()
     print("Guess the sequence. They will disapper in 5 seconds")
     time.sleep(5)
-    os.system('clear')   
+    os.system('clear')
     print(my_sequence)
 
     validate_data(my_sequence)
@@ -95,7 +95,7 @@ user_input = ''
 x = user_input.isdigit()
 
 print(x)
-       
+
 
 print("-" * 15)
 print(f"Your Total is {correct_guesses} out of {guess_limit}")
@@ -117,7 +117,7 @@ def play_game():
     print(rules)
     print("-") * 15
     # Adds the board for user.
-    
+
     return cont_game()
 
 
