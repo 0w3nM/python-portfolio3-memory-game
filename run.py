@@ -5,6 +5,10 @@ import sys
 import time
 from time import sleep
 
+global guess_limit
+global random_number
+global correct_guesses
+global my_sequence
 
 # Users board
 user_board = [[""] * 4 for i in range(4)]
@@ -31,7 +35,6 @@ def print_board(board):
     Function to print board
     """
     print('+') * 9
-    row_number = 1
 
 
 def random_numbers():
@@ -40,7 +43,6 @@ def random_numbers():
     """
 
 
-global my_sequence
 count = 0
 while count < len(my_sequence):
     my_sequence[count] = random.randint(1, 9)
@@ -67,10 +69,6 @@ def user_input(board):
     of the sequence.
     """
 
-    global guess_limit
-    global random_number
-    global correct_guesses
-
     guess_limit = 0
     correct_guesses = 0
 
@@ -94,7 +92,7 @@ def user_input(board):
         if guess_sequence != my_sequence:
             print("Incorrect!! Sequecnce is:", my_sequence)
 
-  
+
 print("-" * 15)
 print(f"Your Total is {correct_guesses} out of {guess_limit}")
 print("-" * 15)
