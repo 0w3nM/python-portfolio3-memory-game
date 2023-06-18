@@ -85,14 +85,14 @@ joined = "".join([str(x) for x in my_sequence])
 # check if the guess is the same as the joined list
 if joined == guess:
     correct_guesses = correct_guesses + 1
-     print("CORRECT !! ")
+    print("CORRECT !! ")
 else:
-    print("Incorrect !! Sequence is:", my sequence)
+    print("INCORRECT !! Sequence is:", my_sequence)
 
 # isdigit check
 user_input = ''
 
-x = txt.isdigit()
+x = user_input.isdigit()
 
 print(x)
        
