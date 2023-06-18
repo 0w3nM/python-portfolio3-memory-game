@@ -94,7 +94,7 @@ def user_input(board):
         if guess_sequence != my_sequence:
             print("Incorrect!! Sequecnce is:", my_sequence)
 
-    
+  
 print("-" * 15)
 print(f"Your Total is {correct_guesses} out of {guess_limit}")
 print("-" * 15)
