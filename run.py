@@ -10,8 +10,6 @@ global random_number
 global correct_guesses
 global my_sequence
 
-# Users board
-user_board = [[""] * 4 for i in range(4)]
 
 correct_guesses = 0
 guess_limit = 0
@@ -28,13 +26,6 @@ print("Welcome to the Memory Game! /n")
 print("The objective of this game is for")
 print("you to try and guess the sequence.")
 print("Fail more than 3 times and its GAME OVER!")
-
-
-def print_board(board):
-    """
-    Function to print board
-    """
-    print('+') * 9
 
 
 def random_numbers():
@@ -63,7 +54,7 @@ def new_sequence():
     os.system('cls')
 
 
-def user_input(board):
+def user_input():
     """
     Allows player to input guess
     of the sequence.
@@ -113,9 +104,7 @@ def play_game():
     print(rules)
     print("-") * 15
     # Adds the board for user.
-    print_board(user_board)
-    user_input(user_board)
-
+    
     return cont_game()
 
 
@@ -125,7 +114,6 @@ def cont_game():
     """
 
 
-print_board(user_board)
 print("Do you wish to continue playing?")
 answer = input("Y / N").upper()
 print("")
