@@ -40,10 +40,10 @@ def new_sequence():
     os.system('clear')   
     print(my_sequence)
 
-    vaidate_data(my_sequence)
+    validate_data(my_sequence)
 
 
-def vailidate_data(guesses):
+def validate_data(guesses):
     """
     Function checks inputs are valid
     """
@@ -51,7 +51,7 @@ def vailidate_data(guesses):
         [int(value) for value in guesses]
         if len(guesses) != 4:
             raise ValueError(
-                f"Only 4 values are required, you gave {len(gueses)}"
+                f"Only 4 values are required, you gave {len(guesses)}"
             )
     except ValueError as e:
         print('f Invalid !: {e}, Enter 4 Digits.')
@@ -77,20 +77,25 @@ while guess_limit < 5:
     guess = input(
         f"What was the sequence"
         "space between, no commas)? :")
-    guess_sequence = guess.split()
-    input_index = len(guess_sequence) - 1
-    while input_index >= 0:
-        guess_sequence[input_index] = int(guess_sequence[input_index])
-        input_index = input_index - 1
+    guess_limit = guess_limit + 1
 
-        print(guess_sequence)
+# join together the int list
+joined = "".join([str(x) for x in my_sequence])
 
-        guess_limit = guess_limit + 1
-        if guess_sequence == my_sequence:
-            print("CORRECT !! ")
-            correct_guesses = correct_guesses + 1
-        if guess_sequence != my_sequence:
-            print("Incorrect!! Sequecnce is:", my_sequence)
+# check if the guess is the same as the joined list
+if joined == guess:
+    correct_guesses = correct_guesses + 1
+     print("CORRECT !! ")
+else:
+    print("Incorrect !! Sequence is:", my sequence)
+
+# isdigit check
+user_input = ''
+
+x = txt.isdigit()
+
+print(x)
+       
 
 print("-" * 15)
 print(f"Your Total is {correct_guesses} out of {guess_limit}")
