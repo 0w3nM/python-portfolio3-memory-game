@@ -38,7 +38,23 @@ def new_sequence():
     print("Guess the sequence. They will disapper in 5 seconds")
     time.sleep(5)
     os.system('clear')   
-    print(my_sequence)   
+    print(my_sequence)
+
+    vaidate_data(my_sequence)
+
+
+def vailidate_data(guesses):
+    """
+    Function checks inputs are valid
+    """
+    try:
+        [int(value) for value in guesses]
+        if len(guesses) != 4:
+            raise ValueError(
+                f"Only 4 values are required, you gave {len(gueses)}"
+            )
+    except ValueError as e:
+        print('f Invalid !: {e}, Enter 4 Digits.')
 
 
 def user_input():
