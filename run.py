@@ -22,23 +22,25 @@ def random_number():
     """
     List of randomised numbers.
     """
-    return dtr(random.randint(10000, 99999))
+    return str(random.randint(10000, 99999))
 
 
-
-def user_input():
+def num_guess():
     """
-    Allows player to input guess
-    of the sequence.
+    Allows player to see the sequence
+    and then input a guess of the sequence.
     """
+    number_to_guess = random_number()
+    print("Remember this sequence for 5 seconds: ", number_to_guess)
+    time.sleep(5)
+    os.system("clear")
+    user_guess = input("Enter Guess: ")
 
-
-global guess_limit
-global random_number
-global correct_guesses
-
-guess_limit = 0
-correct_guesses = 0
+    if not user_guess.isdigit() or len(user_guess) !=5:
+        print("Please Enter A 5-Digit Number")
+        return num_guess()
+    else:
+        return user_guess
 
 
 while guess_limit < 5:
