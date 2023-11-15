@@ -43,53 +43,17 @@ def num_guess():
         return user_guess
 
 
-while guess_limit < 5:
-    new_sequence()
-    guess = input(
-        f"What was the sequence"
-        "space between, no commas)? :")
-    guess_limit = guess_limit + 1
-
-# join together the int list
-joined = "".join([str(x) for x in my_sequence])
-
-# check if the guess is the same as the joined list
-if joined == guess:
-    correct_guesses = correct_guesses + 1
-    print("CORRECT !! ")
-else:
-    print("INCORRECT !! Sequence is:", my_sequence)
-
-# isdigit check
-user_input = ''
-
-x = user_input.isdigit()
-
-print(x)
-
-
-print("-" * 15)
-print(f"Your Total is {correct_guesses} out of {guess_limit}")
-print("-" * 15)
-
-if correct_guesses < 3:
-    print("YOU LOSE !!")
-else:
-    print("YOU WIN !!")
-
-
 def play_game():
     """
     Function to start and play game.
     """
-
-    print("-" * 15)
-    # Adds rules function.
-    print(rules)
-    print("-") * 15
-    # Adds the board for user.
-
-    return cont_game()
+    score = 0
+    guesses = 5
+    for _ in range(guesses):
+        if num_guess():
+            score += 1
+    return score
+    
 
 
 def cont_game():
