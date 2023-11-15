@@ -53,24 +53,18 @@ def play_game():
         if num_guess():
             score += 1
     return score
-    
 
 
-def cont_game():
+def game_restart():
     """
     Allows the user to keep playing
     """
-
-
-print("Do you wish to continue playing?")
-answer = input("Y / N")
-print("")
-while True:
-    if answer == "Y":
-        play_game()
-    if answer == "N":
-        print("")
+    restart = inupt("Do you wish to continue playing? (y/n) ")
+    if restar == "y":
+        os.system('clear')
+        main()
+    else:    
         print("Thanks for Playing!")
         sys.exit()
 
-play_game()
+
