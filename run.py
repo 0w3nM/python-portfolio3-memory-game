@@ -22,38 +22,8 @@ def random_number():
     """
     List of randomised numbers.
     """
+    return dtr(random.randint(10000, 99999))
 
-global my_sequence
-my_sequence = [1, 2, 3, 4]
-count = 0
-while count < len(my_sequence):
-    my_sequence[count] = random.randint(1, 9)
-    count = count = 1
-
-
-def new_sequence():
-    random.shuffle(my_sequence)
-    random_numbers()
-    print("Guess the sequence. They will disapper in 5 seconds")
-    time.sleep(5)
-    os.system('clear')
-    print(my_sequence)
-
-    validate_data(my_sequence)
-
-
-def validate_data(guesses):
-    """
-    Function checks inputs are valid
-    """
-    try:
-        [int(value) for value in guesses]
-        if len(guesses) != 4:
-            raise ValueError(
-                f"Only 4 values are required, you gave {len(guesses)}"
-            )
-    except ValueError as e:
-        print('f Invalid !: {e}, Enter 4 Digits.')
 
 
 def user_input():
