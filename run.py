@@ -10,19 +10,18 @@ def rules():
     """
     Description of the game and its rules.
     """
-
-
+print("-" * 46)
 print("Welcome to the Memory Game!")
 print("The objective of this game is for")
 print("you to try and guess the sequence.")
 print("Fail more than 3 times and its GAME OVER!")
+print("-" * 46)
 
 
-def random_numbers():
+def random_number():
     """
     List of randomised numbers.
     """
-
 
 global my_sequence
 my_sequence = [1, 2, 3, 4]
