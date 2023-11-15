@@ -59,8 +59,8 @@ def game_restart():
     """
     Allows the user to keep playing
     """
-    restart = inupt("Do you wish to continue playing? (y/n) ")
-    if restar == "y":
+    restart = input("Do you wish to continue playing? (y/n) ")
+    if restart == "y":
         os.system('clear')
         main()
     else:    
@@ -68,3 +68,17 @@ def game_restart():
         sys.exit()
 
 
+def main():
+    """
+    Function that runs and finishes the game.
+    """
+    score = play_game()
+    if score >= 3:
+        print(f"Congratulations! You scored {score} out of 5 numbers. You win!")
+    else:
+        print(f"Sorry, you scored {score} out of 5 numbers. You lost.")
+    game_restart()
+
+
+if __name__ == "__main__":
+    main()
