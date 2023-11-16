@@ -10,6 +10,8 @@ def rules():
     """
     Description of the game and its rules.
     """
+
+
 print("-" * 46)
 print("Welcome to the Memory Game!")
 print("The objective of this game is for")
@@ -36,17 +38,21 @@ def num_guess():
     os.system("clear")
     user_guess = input("Enter Guess: ")
 
-    if not user_guess.isdigit() or len(user_guess) !=5:
-        print("Please Enter A 5-Digit Number")
-        return num_guess()
+    global score
+    
+    if user_guess == number_to_guess:
+        print("Congratulations! You guessed it right!")       
     else:
-        return user_guess
+        print("Sorry, you guessed it wrong.")        
+        
+    if not user_guess.isdigit() or len(user_guess) != 5:
+        print("Please Enter A 5-Digit Number")
+        return False
+
+    return user_guess == number_to_guess
 
 
 def play_game():
-    """
-    Function to start and play game.
-    """
     score = 0
     guesses = 5
     for _ in range(guesses):
@@ -71,12 +77,12 @@ def game_restart():
 def main():
     """
     Function that runs and finishes the game.
-    """
+    """    
     score = play_game()
     if score >= 3:
-        print(f"Congratulations! You scored {score} out of 5 numbers. You win!")
+        print(f"Congratulations! You matched {score} out of 5 numbers. You win!")
     else:
-        print(f"Sorry, you scored {score} out of 5 numbers. You lost.")
+        print(f"Sorry, you matched {score} out of 5 numbers. You lost.")   
     game_restart()
 
 
