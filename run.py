@@ -69,9 +69,8 @@ def game_restart():
     if restart == "y":
         os.system('clear')
         main()
-    else:    
-        print("Thanks for Playing!")
-        sys.exit()
+    else: 
+        sys.exit("Thanks for Playing!")
 
 
 def main():
