@@ -39,12 +39,11 @@ def num_guess():
     user_guess = input("Enter Guess: ")
 
     global score
-    
+
     if user_guess == number_to_guess:
-        print("Congratulations! You guessed it right!")       
+        print("Congratulations! You guessed it right!")
     else:
-        print("Sorry, you guessed it wrong.")        
-        
+        print("Sorry, you guessed it wrong.")
     if not user_guess.isdigit() or len(user_guess) != 5:
         print("Please Enter A 5-Digit Number")
         return False
@@ -69,19 +68,20 @@ def game_restart():
     if restart == "y":
         os.system('clear')
         main()
-    else: 
+    else:
         sys.exit("Thanks for Playing!")
 
 
 def main():
     """
     Function that runs and finishes the game.
-    """    
+    """
     score = play_game()
     if score >= 3:
-        print(f"Congratulations! You matched {score} out of 5 numbers. You win!")
+        print(f"Congratulations! You matched {score} out of 5 numbers.
+              You win!")
     else:
-        print(f"Sorry, you matched {score} out of 5 numbers. You lost.")   
+        print(f"Sorry, you matched {score} out of 5 numbers. You lost.")
     game_restart()
 
 
