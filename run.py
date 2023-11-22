@@ -89,8 +89,7 @@ def main():
     user_name = valid_name()
     score = play_game(user_name)
     if score >= 3:
-        print(f"Congratulations {user_name}! You Guessed {score} out of 5,
-              You win!")
+        print(f"Well Done {user_name}! You Guessed {score} out of 5 You win!")
     else:
         print(f"Sorry {user_name}, You Guessed {score} Out Of 5, You Lost.")
     game_restart()
