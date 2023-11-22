@@ -11,6 +11,7 @@ def rules():
     Description of the game and its rules.
     """
 
+
 print("-" * 46)
 print("Welcome to the Memory Game!")
 print("The objective of this game is for")
@@ -35,7 +36,7 @@ def num_guess():
     print("Remember this number for 5 seconds: ", number_to_guess)
     time.sleep(5)
     os.system("clear")
-    user_guess = input("Enter Guess: ")    
+    user_guess = input("Enter Guess: ")
 
     if user_guess == number_to_guess:
         print("Congratulations! You guessed it right!")
@@ -88,7 +89,8 @@ def main():
     user_name = valid_name()
     score = play_game(user_name)
     if score >= 3:
-        print(f"Congratulations {user_name}! You Guessed {score} out of 5, You win!")
+        print(f"Congratulations {user_name}! You Guessed {score} out of 5,
+              You win!")
     else:
         print(f"Sorry {user_name}, You Guessed {score} Out Of 5, You Lost.")
     game_restart()
