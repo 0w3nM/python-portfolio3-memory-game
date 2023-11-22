@@ -11,7 +11,6 @@ def rules():
     Description of the game and its rules.
     """
 
-
 print("-" * 46)
 print("Welcome to the Memory Game!")
 print("The objective of this game is for")
@@ -33,12 +32,10 @@ def num_guess():
     and then input a guess of the sequence.
     """
     number_to_guess = random_number()
-    print("Remember this sequence for 5 seconds: ", number_to_guess)
+    print("Remember this number for 5 seconds: ", number_to_guess)
     time.sleep(5)
     os.system("clear")
-    user_guess = input("Enter Guess: ")
-
-    global score
+    user_guess = input("Enter Guess: ")    
 
     if user_guess == number_to_guess:
         print("Congratulations! You guessed it right!")
@@ -51,7 +48,19 @@ def num_guess():
     return user_guess == number_to_guess
 
 
-def play_game():
+def valid_name():
+    """
+    Asks user for their name and returns it
+    """
+    while True:
+        user_name = input("Enter Name: ")
+        if user_name.isalpha():
+            return user_name
+        else:
+            print("Invalid, Please Enter A Valid Name")
+
+
+def play_game(user_name):
     score = 0
     guesses = 5
     for _ in range(guesses):
@@ -76,12 +85,12 @@ def main():
     """
     Function that runs and finishes the game.
     """
-    score = play_game()
+    user_name = valid_name()
+    score = play_game(user_name)
     if score >= 3:
-        print(f"Congratulations! You matched {score} out of 5 numbers.
-              You win!")
+        print(f"Congratulations {user_name}! You Guessed {score} out of 5, You win!")
     else:
-        print(f"Sorry, you matched {score} out of 5 numbers. You lost.")
+        print(f"Sorry {user_name}, You Guessed {score} Out Of 5, You Lost.")
     game_restart()
 
 
