@@ -16,22 +16,29 @@ The rules are simple. Repeat the sequence that was shown 5 times. Anything less 
 ## Existing Features
 * Greetings message to the user with the rules.
 ![Greeting Message](img/pp3_welcome_message_rules_name.png)
+
 * Name input box to start the game.
 ![Name Box](img/pp3_input.png)
 ![Input Data](img/pp3_input_filled.png)
 ![Game Accessed](img/pp3_input_access.png)
+
 * Error message on invalid entry input to Name input box.
 ![Input Name Error](img/pp3_invalid_name.png)
+
 * Randomised Number of digits for the user to remeber.
 ![Randomised Number](img/pp3_number_to_guess.png)
+
 * Sequence dissappears after 5 seconds.
 ![Number Input](img/pp3_input.png)
+
 * User guess and message returns correct or incorrect with the sequence it was.
 ![Correct Guess](img/pp3_correct_guess.png)
 ![Incorrect Guess](img/pp3_wrong_guess.png)
-* Message shows if the user won or lost
+
+* Message shows if the user won or lost.
 ![Winning Message](img/pp3_name_in_message.png)
 ![Losing Message](img/pp3_losing_message.png)
+
 * Message if the user wishes to continue with either a 'Y' or 'N'
 ![Not Continuing](img/pp3_no_continue.png)
 ![Continuing](img/pp3_continuation_input.png)
