@@ -82,5 +82,6 @@ Manual testing was carried out with:
 * Learning how to clear the screen was achieved also from [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/).
 * Other inspirtaions came from YouTube videos such as [Tech With Tim](https://www.youtube.com/watch?v=J9RQcF7hhgA/) & [Case Digital](https://www.youtube.com/watch?v=XlZDv2BgTk4/)
 * To understand Error Handling more i used [W3Schools](https://www.w3schools.com/python/gloss_python_error_handling.asp/), [Stack Overflow](https://stackoverflow.com/questions/28377995/exception-handling-how-to-handle-invalid-datatype-in-user-input/) & [GeeksforGeeks](https://www.geeksforgeeks.org/python-exception-handling/).
-* When needing to validate empty or invalid input data, with code such as .isaplpha i used [W3Schools](https://www.w3schools.com/python/ref_string_isalpha.asp/)
-* The underscore that was needed for the for loop was researched through [CodeAcademy](https://discuss.codecademy.com/t/use-of-in-range/602290/)
+* When needing to validate empty or invalid input data, with code such as .isaplpha i used [W3Schools](https://www.w3schools.com/python/ref_string_isalpha.asp/).
+* The underscore that was needed for the for loop was researched through [CodeAcademy](https://discuss.codecademy.com/t/use-of-in-range/602290/).
+* Other Students via Slack were helpful in creating this game.
